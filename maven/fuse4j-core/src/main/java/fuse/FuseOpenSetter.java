@@ -33,4 +33,6 @@ public interface FuseOpenSetter
    public boolean isKeepCache();
 
    public void setKeepCache(boolean keepCache);
+
+   public Object getFh();
 }

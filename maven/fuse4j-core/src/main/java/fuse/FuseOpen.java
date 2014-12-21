@@ -67,4 +67,8 @@ public class FuseOpen extends Struct implements FuseOpenSetter
 
       return true;
    }
+
+   public Object getFh() {
+    return fh;
+   }
 }

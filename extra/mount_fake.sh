@@ -1,13 +1,13 @@
 #!/bin/sh
 
 #JAVA_HOME=  -- YOU MUST SET JAVA_HOME --
+JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 # This script uses the native (executable) launcher which works in either the foreground or forked into the background.
 
 PROJECT_NAME=fuse4j
 CWD=`pwd`
 
-FUSE_HOME=/usr/local
 MOUNT_POINT=${CWD}/fake
 FS_CLASS=fuse/FakeFilesystem
 VERSION=2.4.0.0-SNAPSHOT
@@ -15,7 +15,7 @@ VERSION=2.4.0.0-SNAPSHOT
 
 M2_REPO=${HOME}/.m2/repository
 
-LD_LIBRARY_PATH=$FUSE_HOME/lib:${JAVA_HOME}/jre/lib/amd64/server
+LD_LIBRARY_PATH=${JAVA_HOME}/jre/lib/amd64/server
 export LD_LIBRARY_PATH
 
 CLASSPATH=""
